@@ -1,3 +1,13 @@
+type User {
+
+	name: String!
+	birthDay: String!
+	phoneNumber: String!
+
+}
+
 type Query {
-  helloWorld: String!
+
+  readAllUser: [User]
+
 }
