@@ -4,12 +4,7 @@ interface User {
 	phoneNumber: String;
 }
 
-interface Post {
-	title: String;
-	created: String;
-}
-
-let users: User[] = [
+let userList: User[] = [
     {
       name : "Agomjae",
       birthDay : "930218",
@@ -22,18 +17,7 @@ let users: User[] = [
     },
 ];
 
-let posts: Post[] = [
-  {
-    title : "Abook",
-    created : "2020/01/01"
-  },
-  {
-    title : "Bbook",
-    created : "2020/01/02"
-  }
-];
 
 module.exports = {
-  Users : users,
-  Posts : posts,
+  Users : userList
 }

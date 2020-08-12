@@ -8,6 +8,7 @@ type User {
 
 type Query {
 
+  readAllPost: [Post]!
   readAllUser: [User]
 
 }

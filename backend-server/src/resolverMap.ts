@@ -1,12 +1,12 @@
 import { IResolvers } from 'graphql-tools';
-const { Users } = require('./graphql/db')
+const { Users } = require('./graphql/db/userDB')
+const { Posts } = require('./graphql/db/postDB')
 
-const resolverMap: IResolvers = {
-
+const resolverMap: IResolvers  ={
   Query: {
-    readAllUser: ()=> Users
+    readAllUser: ()=> Users,
+    readAllPost: ()=> Posts
   }
+}
 
-};
-
-export default resolverMap;
+module.exports = resolverMap;

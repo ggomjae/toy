@@ -1,8 +1,16 @@
 import 'graphql-import-node';
-import * as typeDefs from './schema/schema.graphql';
 import { makeExecutableSchema } from 'graphql-tools';
-import resolvers from './resolverMap';
 import { GraphQLSchema } from 'graphql';
+
+const resolvers = require('./resolverMap');
+
+const userTypeDefs = require('./graphql/schemas/user/schema.graphql');
+const postTypeDefs = require('./graphql/schemas/post/schema.graphql');
+
+const typeDefs = [
+  userTypeDefs,
+  postTypeDefs
+]
 
 const schema: GraphQLSchema = makeExecutableSchema({
   
